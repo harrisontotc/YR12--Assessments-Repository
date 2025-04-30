@@ -26,3 +26,10 @@ JOIN Makers ON Makers.MakerID=Bikes.MakerID;
 SELECT Bikes.Model FROM Bikes
 JOIN Makers ON Makers.MakerID=Bikes.MakerID
 WHERE Makers.Name="Yamaha";
+
+SELECT Bikes.BikeID,Makers.Name,Bikes.Model,Bikes.ImageURL
+FROM Bikes
+JOIN Makers ON Makers.MakerID=Bikes.MakerID;
+
+SELECT * FROM Bikes JOIN Makers ON Makers.MakerID=Bikes.MakerID
+WHERE Bikes.BikeID = 2;
