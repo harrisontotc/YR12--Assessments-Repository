@@ -1,0 +1,28 @@
+-- database: ./database.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+SELECT * FROM Bikes;
+
+INSERT INTO Bikes(Model,TopSpeed,Cost,Description) VALUES("MT-03",108,5300,"The MT-03 is a lightweight and agile bike, perfect for city riding and twisty roads. It features a 321cc engine and a comfortable riding position.");
+
+INSERT INTO Bikes (Model, TopSpeed, Cost, Description) VALUES ('XSR700', 125, 9000, "The XSR700 is a retro-styled bike that combines modern performance with classic design. It has a 689cc engine and is known for its nimble handling and fun riding experience.");
+INSERT INTO Bikes (Model, TopSpeed, Cost, Description) VALUES ('FJR1300', 155, 1800, "The FJR1300 is a sport-touring bike that offers comfort and performance for long-distance rides. It features a 1298cc engine, advanced electronics, and a comfortable riding position.");
+INSERT INTO Bikes (Model, TopSpeed, Cost, Description) VALUES ('GSX-S1000', 160, 12000, "The GSX-S1000 is a naked bike that delivers thrilling performance and aggressive styling. It has a 999cc engine and is designed for riders who want a powerful and responsive machine.");
+INSERT INTO Bikes (Model, TopSpeed, Cost, Description) VALUES ('V-Strom 1050', 130, 7000, "The V-Strom 1050 is an adventure touring bike that combines versatility and comfort. It features a 1037cc engine, advanced electronics, and a comfortable riding position for long journeys.");
+INSERT INTO Bikes (Model, TopSpeed, Cost, Description) VALUES ('GSX250R', 125, 4500, "The GSX250R is a lightweight sportbike that is perfect for beginners. It features a 248cc engine, sporty styling, and a comfortable riding position for city commuting.");
+INSERT INTO Bikes (Model, TopSpeed, Cost, Description) VALUES ('CBR650R', 130, 8500, "The CBR650R is a sportbike that offers a balance of performance and comfort. It features a 649cc engine, aggressive styling, and advanced electronics for an exhilarating riding experience.");
+INSERT INTO Bikes (Model, TopSpeed, Cost, Description) VALUES ('CTX700', 110, 8000, "The CTX700 is a cruiser-style bike that combines comfort and performance. It features a 670cc engine, low seat height, and a relaxed riding position for easy handling.");
+INSERT INTO Bikes (Model, TopSpeed, Cost, Description) VALUES ('PCX160', 80, 4000, "The PCX160 is a stylish and practical scooter that is perfect for city commuting. It features a 157cc engine, comfortable seating, and ample storage space for everyday use.");
+INSERT INTO Bikes (Model, TopSpeed, Cost, Description) VALUES ('Niken', 100, 17000, "The Niken is a unique three-wheeled motorcycle that offers exceptional stability and handling. It features a 847cc engine, advanced suspension, and a comfortable riding position for long rides.");
+INSERT INTO Bikes (Model, TopSpeed, Cost, Description) VALUES ('GSX-R750', 170, 13000, "The GSX-R750 is a high-performance sportbike that delivers thrilling acceleration and handling. It features a 750cc engine, lightweight chassis, and advanced electronics for an exhilarating riding experience.");
+INSERT INTO Bikes (Model, TopSpeed, Cost, Description) VALUES ('CB1000R', 145, 11000, "The CB1000R is a naked bike that combines modern performance with classic styling. It features a 998cc engine, aggressive design, and advanced electronics for a thrilling ride.");
+
+SELECT * FROM Bikes;
+
+SELECt makers.Name,Bikes.Model FROM Bikes
+JOIN Makers ON Makers.MakerID=Bikes.MakerID;
+
+SELECT Bikes.Model FROM Bikes
+JOIN Makers ON Makers.MakerID=Bikes.MakerID
+WHERE Makers.Name="Yamaha";
