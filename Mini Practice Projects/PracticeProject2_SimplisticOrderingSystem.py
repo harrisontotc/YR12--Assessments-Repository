@@ -17,13 +17,13 @@ def purchase_order(tax, choice, quantity):
 
 def ordering_system():
     user_ordering = True
-    while user_ordering:
+    while user_ordering == True:
         print("\nWelcome to the Simplistic Ordering System!")
         choice = int(input("What would you like to order? \n1. Pizza\n2. Burger\n3. Salad\n4. Exit\n"))
 
         if choice == 4:
             print("Thank you for using the Simplistic Ordering System!")
-            break
+            user_ordering = False
 
         if choice not in [1, 2, 3]:
             print("Invalid selection. Please choose a valid menu option.")
@@ -37,7 +37,7 @@ def ordering_system():
                 continue
             else:
                 print("Thank you for using the Simplistic Ordering System!")
-                break
+                user_ordering = False
 
         elif quantity > 5:
             return_to_menu = int(input("We do not allow orders above 5. Would you like to return to the menu or exit? (1 for Yes, 0 for No.) "))
@@ -45,7 +45,7 @@ def ordering_system():
                 continue
             else:
                 print("Thank you for using the Simplistic Ordering System!")
-                break
+                user_ordering = False
 
         else:
             item = {1: "pizza", 2: "burger", 3: "salad"}[choice]
@@ -59,7 +59,7 @@ def ordering_system():
                     continue
                 else:
                     print("Thank you for using the Simplistic Ordering System!")
-                    break
+                    user_ordering = False
 
 ordering_system()
 print("This message is to confirm the ordering system is closed.")
