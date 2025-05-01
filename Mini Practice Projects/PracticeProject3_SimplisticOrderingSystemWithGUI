@@ -1,3 +1,7 @@
+import tkinter as tk
+import tkinter.messagebox
+
+
 #Creating required variables
 tax = 1.15
 currency = 50
@@ -26,7 +30,7 @@ def ordering_system():
 
         if choice == 4:
             print("Thank you for using the Simplistic Ordering System!")
-            user_ordering = False
+            break
 
         if choice not in [1, 2, 3]:
             print("Invalid selection. Please choose a valid menu option.")
@@ -35,7 +39,7 @@ def ordering_system():
         quantity = int(input("How many would you like to order? "))
 
         if quantity <= 0:
-            return_to_menu = int(input("Invalid input. Would you like to return to the menu? (1 for Yes, 0 for No) "))
+            return_to_menu = int(input("Invalid input. Would you like to return to the menu? \n(1 for Yes, 0 for No) "))
             if return_to_menu == 1:
                 continue
             else:
@@ -43,7 +47,7 @@ def ordering_system():
                 user_ordering = False
 
         elif quantity > 5:
-            return_to_menu = int(input("We do not allow orders above 5. Would you like to return to the menu or exit? (1 for Yes, 0 for No.) "))
+            return_to_menu = int(input("We do not allow orders above 5. Would you like to return to the menu or exit? \n(1 for Yes, 0 for No.) "))
             if return_to_menu == 1:
                 continue
             else:
@@ -53,16 +57,25 @@ def ordering_system():
         else:
             item = {1: "pizza", 2: "burger", 3: "salad"}[choice]
             plural = "s" if quantity > 1 else "" # Add pluralization for items
-            confirm = int(input(f"You have placed an order for {quantity} {item}{plural}. Is this correct? (1 for Yes, 0 for No.) "))
+            confirm = int(input(f"You have placed an order for {quantity} {item}{plural}. Is this correct? \n(1 for Yes, 0 for No.) "))
             if confirm == 1:
                 purchase_order(tax, choice, quantity)
             else:
-                return_to_menu = int(input("Would you like to return to the menu? (1 for Yes, 0 for No) "))
+                return_to_menu = int(input("Would you like to return to the menu? \n(1 for Yes, 0 for No) "))
                 if return_to_menu == 1:
                     continue
                 else:
                     print("Thank you for using the Simplistic Ordering System!")
                     user_ordering = False
 
-ordering_system()
+which_ordering_system = tkinter.messagebox.askquestion("Would you like to use the GUI?")
+if which_ordering_system.capitalize() == "Yes":
+    print("Test.")
+else:
+    ordering_system()
 
+def GUI():
+    app = tk.Tk()
+    app.geometry = ("400x300")
+    app.resizable = (0,0)
+    app.title("Simplistic Ordering System; GUI version.")
