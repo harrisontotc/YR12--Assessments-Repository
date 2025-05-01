@@ -1,8 +1,8 @@
-from flask import Flask, g
+from flask import Flask, g, render_template
 import sqlite3
 import os
 
-DATABASE = r"G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Code\database\database.db"
+DATABASE = r"G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Mini Practice Projects\PracticeProject1_WebsiteWithFlask\database.db"
 
 app = Flask(__name__)
 
@@ -32,7 +32,7 @@ def home():
              FROM Bikes
              JOIN Makers ON Makers.MakerID=Bikes.MakerID;"""
     results = query_db(sql)
-    return str(results)
+    return render_template("layout.html")
 
 @app.route("/bike/<int:id>")
 def bike(id):
