@@ -20,13 +20,13 @@ def purchase_order(tax, choice, quantity):
 #Defining ordering system function
 def ordering_system():
     user_ordering = True
+    print("\nWelcome to the Simplistic Ordering System!")
     while user_ordering == True:
-        print("\nWelcome to the Simplistic Ordering System!")
         choice = int(input("What would you like to order? \n1. Pizza\n2. Burger\n3. Salad\n4. Exit\n"))
 
         if choice == 4:
             print("Thank you for using the Simplistic Ordering System!")
-            user_ordering = False
+            break
 
         if choice not in [1, 2, 3]:
             print("Invalid selection. Please choose a valid menu option.")
