@@ -5,8 +5,68 @@
     <link rel="stylesheet" href="websiteStyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AssessmentWebsite_HealthyRecipe's</title>
+
+<style>
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.nav-bar-links {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+.nav-bar-links:last-child {
+    border-right: none;
+}
+
+.nav-bar-links a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-bar-links a:hover {
+  background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+</style>   
+
 </head>
 <body>
-    
+    <!-- Top Nav Bar -->
+    <ul class="nav-bar">
+        <li class="nav-bar-links"><a class="active" href="">Home</a></li>
+        <li class="nav-bar-links"><a href="">Recipes</a></li>
+        <li class="nav-bar-links"><a href="">Settings</a></li>
+        <li style="float:right" class="nav-bar-links"><a href="">Contact</a></li>
+    </ul>
+    <!-- Hero Video -->
+    <video class="hero-video" muted autoplay loop>
+        <source src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\3325984-hd_1920_1080_24fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+        <h1 class="hero-title">
+            Test
+        </h1>
+        <h3 class="hero-subtitle">
+            <em>Test</em>
+        </h3>
+    </div>
 </body>
 </html>

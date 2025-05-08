@@ -1,3 +1,40 @@
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.hero-video {
+    object-fit: cover;
+    object-position: center;
+    height: 650px;
+    width: 100%;
+    filter: contrast(65%);
+    border-radius: 5px;
+}
+
+.hero-overlay {
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+}
+
+.hero-title {
+    font-size: 7rem;
+    color: whitesmoke;
+    padding-top: 50px;
+    width: max-content;
+}
+
+.hero-subtitle {
+    font-size: 2.3rem;
+    color:rgb(85, 0, 0);
+    width: 100%;
+    padding-top: 100px;
+}
