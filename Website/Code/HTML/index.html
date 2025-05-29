@@ -12,7 +12,11 @@
 <ul class="nav-bar">
   <li class="nav-bar-links"><a class="active" href="index.html">Home</a></li>
   <li class="nav-bar-links"><a href="recipes.html">Recipes</a></li>
-  <a href="settings.html"><img src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\images-removebg-preview.png" alt="settings-cog-wheel" style="float:right" class="nav-bar-links"></a>
+  <li class="nav-bar-links"><a href="settings.html">Settings</a></li>
+  <div class="login-buttons">
+    <li><a href="">Sign-In</a></li>
+    <li><a href="">Register</a></li>
+  </div>
 </ul>
 
 <!-- CSS for Navigation Bar -->
@@ -35,17 +39,11 @@ float: left;
 border-right: 1px solid #bbb;
 }
 
-.nav-bar-links:last-child {
-border-right: none;
-margin-right: 10px;
-width: 2%;
-}
-
 .nav-bar-links a {
 display: block;
 color: white;
 text-align: center;
-padding: 10px 12px;
+padding: 22px 24px;
 text-decoration: none;
 }
 
@@ -56,6 +54,24 @@ background-color: #111;
 .active {
 background-color: #04AA6D;
 }
+
+.login-buttons {
+  float: right;
+  margin-right: 12px;
+}
+
+.login-buttons a {
+display: block;
+color: white;
+text-align: center;
+padding: 6px 8px;
+text-decoration: none;
+}
+
+.login-buttons a:hover {
+  background-color: #111;
+}
+
 
 </style>   
 
@@ -68,6 +84,17 @@ background-color: #04AA6D;
   <h1 style="font-size:10vw" class="hero-title">Healthy Recipes</h1>
   <h3 class="hero-subtitle"><em>For all your baking needs</em></h3>
 </div>
+
+<!-- Featured Recipes -->
+<h3 style="margin-left:5px; font-size:1.8vw;">Featured Recipes</h3>
+<section class="featured-recipes">
+  <img style="width:30vw" class="1st-featured-recipe" src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\3-layer-chocolate-cake7734.jpg" alt="3-layer-chocolate-cake">
+  <p>Test</p>
+  <img style="width:30vw" class="2nd-featured-recipe" src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\healthy-chocolate-chip-cookies8.jpg" alt="chocolate-chip-cookie">
+  <p>Test</p>
+</section>
+
+<!--  -->
 
 </body>
 </html>
