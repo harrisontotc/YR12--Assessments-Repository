@@ -35,17 +35,10 @@ width: max-content;
 
 .hero-subtitle {
 font-size: 2rem;
-color:rgba(238, 223, 155, 0.836);
+color:rgba(238, 223, 155, 0.849);
 width: 100%;
 padding-top: 100px;
 word-spacing: 15px;
 opacity: 80%;
 }
 
-.featured-recipes {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 30px;
-margin: auto;
-margin-top: 6px;
-}

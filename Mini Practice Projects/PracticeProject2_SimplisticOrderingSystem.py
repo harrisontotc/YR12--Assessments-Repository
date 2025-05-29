@@ -54,7 +54,7 @@ def ordering_system():
 
         else:
             item = {1: "pizza", 2: "burger", 3: "salad"}[choice]
-            plural = "s" if quantity > 1 else "" # Add pluralization for items
+            plural = "s" if quantity > 1 else "" 
             confirm = int(input(f"You have placed an order for {quantity} {item}{plural}. Is this correct? (1 for Yes, 0 for No.) "))
             if confirm == 1:
                 purchase_order(tax, choice, quantity)
