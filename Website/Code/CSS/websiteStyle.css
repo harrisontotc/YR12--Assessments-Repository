@@ -7,7 +7,7 @@ width: 100%;
 border-radius: 5px;
 }
 
-.hero-image {
+.hero-video {
 margin-top: 30px;
 object-fit: cover;
 object-position: center;
@@ -27,7 +27,7 @@ padding: 10px 20px;
 }
 
 .hero-title {
-font-size: 7rem;
+font-size: 6rem;
 color: rgb(0, 0, 0);
 padding-top: 50px;
 width: max-content;

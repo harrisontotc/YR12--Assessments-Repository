@@ -42,8 +42,9 @@
   }
   
   .text {
-    color: white;
-    font-size: 22px;
+    color: black;
+    background-color: white;
+    font-size: 30px;
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
@@ -84,6 +85,13 @@
     to {opacity: 1}
   }
 
+  .additional-text {
+    display: inline;
+    position: absolute;
+    margin-left: 15px;
+    width: 700px;
+  }
+
   </style>   
   
 
@@ -91,35 +99,44 @@
 <body>
 
 <!-- Hero Image -->
-<video class="hero-image" muted autoplay loop>
-  <source src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\3325984-hd_1920_1080_24fps.mp4" type="video/mp4">
+<video class="hero-video" muted autoplay loop>
+  <source src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\9413470-hd_1920_1080_25fps.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 <div class="hero-overlay">
-  <h1 style="font-size:10vw" class="hero-title">Vote John Doe Today!</h1>
-  <h3 class="hero-subtitle"><em>New Zealand deserves John Doe</em></h3>
+  <h1 style="font-size:8.5vw" class="hero-title">Vote John Smith Today!</h1>
+  <h3 class="hero-subtitle"><em>America deserves John Doe</em></h3>
 </div>
 
 <!-- Featured Images - Slideshow -->
-<h3>Featured Recipes</h3>
+<h2>Why John Smith is Awesome</h2>
 <div class="slideshow-container">
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\3-layer-chocolate-cake7734.jpg" style="width:100%">
-  <div class="text">Three-layer low-fat chocolate cake</div>
+  <img src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\johnsmith.jpg" style="width:100%">
+  <div class="additional-text">
+    <h2>He can speak Latin!</h2>
+    <p>test</p>
+  </div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\healthy-chocolate-chip-cookies8.jpg" style="width:100%">
-  <div class="text">Melted sugar-free chocolate chip cookies</div>
+  <img src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\depositphotos_154377166-stock-photo-a-man-in-a-suit.jpg" style="width:100%">
+  <div class="additional-text">
+    <h2>Look how confident and photogenic he is!</h2>
+    <p>test</p>
+  </div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\3-layer-chocolate-cake7734.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
+  <img src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\r26_0_1943_1080_w1200_h678_fmax.jpg" style="width:100%">
+  <div class="additional-text">
+    <h2>He <em>really</em> cares about his voters!</h2>
+    <p>test</p>
+  </div>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">❮</a>
