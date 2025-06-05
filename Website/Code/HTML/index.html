@@ -4,166 +4,103 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Code\CSS\websiteStyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AssessmentWebsite_HealthyRecipe's</title>
+    <title>AssessmentWebsite_PoliticalCampaign</title>
 
 <!-- CSS for Website Interactables -->
 <style>
+  /* Featured Images CSS*/
 * {box-sizing: border-box}
 .mySlides {display: none}
-img {vertical-align: middle;}
 
-
-  .nav-bar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-  }
-  
-  .nav-bar-links {
-  float: left;
-  border-right: 1px solid #bbb;
-  }
-  
-  .nav-bar-links a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 22px 24px;
-  text-decoration: none;
-  }
-  
-  .nav-bar-links a:hover {
-  background-color: #111;
-  }
-  
-  .active {
-  background-color: #04AA6D;
-  }
-  
-  .login-buttons {
-    float: right;
-    margin-right: 12px;
-  }
-  
-  .login-buttons a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 6px 8px;
-  text-decoration: none;
-  }
-  
-  .login-buttons a:hover {
-    background-color: #111;
-  }
-  
   .slideshow-container {
-      max-width: 1000px;
-      transform: translate(8px); 
+    max-width: 1000px;
+    transform: translate(8px); 
   }
   
   .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
   }
   
   .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
+    right: 0;
+    border-radius: 3px 0 0 3px;
   }
   
   .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.8);
   }
   
   .text {
-      color: white;
-      font-size: 22px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
+    color: white;
+    font-size: 22px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
   }
   
   .numbertext {
-      color: whitesmoke;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
+    color: whitesmoke;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
   }
   
   .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
   }
   
   .active, .dot:hover {
-      background-color: #717171;
+    background-color: #717171;
   }
   
   .fade {
-      animation-name: fade;
-      animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 2.0s;
   }
   
   @keyframes fade {
-      from {opacity: .4}
-      to {opacity: 1}
+    from {opacity: .4}
+    to {opacity: 1}
   }
-  
+
   </style>   
   
 
 </head>
 <body>
 
-<!-- Navigation Bar -->
-<ul class="nav-bar">
-  <li class="nav-bar-links"><a class="active" href="index.html">Home</a></li>
-  <li class="nav-bar-links"><a href="recipes.html">Recipes</a></li>
-  <li class="nav-bar-links"><a href="settings.html">Settings</a></li>
-  <div class="login-buttons">
-    <li><a href="">Sign-In</a></li>
-    <li><a href="">Register</a></li>
-  </div>
-</ul>
-
-
-<!-- Hero Video -->
-<video class="hero-video" muted autoplay loop>
+<!-- Hero Image -->
+<video class="hero-image" muted autoplay loop>
   <source src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\3325984-hd_1920_1080_24fps.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 <div class="hero-overlay">
-  <h1 style="font-size:10vw" class="hero-title">Healthy Recipes</h1>
-  <h3 class="hero-subtitle"><em>For all your baking needs</em></h3>
+  <h1 style="font-size:10vw" class="hero-title">Vote John Doe Today!</h1>
+  <h3 class="hero-subtitle"><em>New Zealand deserves John Doe</em></h3>
 </div>
 
-<!-- Featured Recipes - Slideshow -->
+<!-- Featured Images - Slideshow -->
 <h3>Featured Recipes</h3>
 <div class="slideshow-container">
 
@@ -196,6 +133,8 @@ img {vertical-align: middle;}
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
+
+<!-- Featured Images - Java -->
 
 <script>
 let slideIndex = 1;
