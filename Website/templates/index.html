@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Code\CSS\websiteStyle.css">
+    <link rel="stylesheet" href="../static/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AssessmentWebsite_PoliticalCampaign</title>
 
@@ -100,7 +100,7 @@
 
 <!-- Hero Image -->
 <video class="hero-video" muted autoplay loop>
-  <source src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\9413470-hd_1920_1080_25fps.mp4" type="video/mp4">
+  <source src="../static/9413470-hd_1920_1080_25fps.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 <div class="hero-overlay">
@@ -116,7 +116,7 @@
 <!-- Note: all text contained in the "<p>" tags in the slides is A.I generated. See "ChatGPT evidence". -->
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\johnsmith.jpg" style="width:100%">
+  <img src="../static/johnsmith.jpg" style="width:100%">
   <div class="additional-text">
     <h2>He can speak Latin!</h2>
     <p>John Smith is not your average political campaigner. Among his many qualities, one stands out as both unusual and surprisingly meaningful—he speaks fluent Latin. To many, this might seem like an eccentric footnote in a modern politician's biography, but to those who understand the weight of such a skill, it reveals something deeper about his character, values, and vision.
@@ -133,7 +133,7 @@ When voters look at John Smith and see a man who can speak Latin, they are not j
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\depositphotos_154377166-stock-photo-a-man-in-a-suit.jpg" style="width:100%">
+  <img src="../static/depositphotos_154377166-stock-photo-a-man-in-a-suit.jpg" style="width:100%">
   <div class="additional-text">
     <h2>Look how confident and photogenic he is!</h2>
     <p>In today’s hyper-visual world—where a single image, a ten-second video, or a moment of body language can shape public opinion—presence matters. It’s not just about looking good on camera; it’s about how a leader carries themselves, how they are perceived across the screens and stages of a 21st-century democracy. And that’s precisely where John Smith excels.
@@ -154,7 +154,7 @@ So when people say John Smith is confident and photogenic, it’s not just a com
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\Media\r26_0_1943_1080_w1200_h678_fmax.jpg" style="width:100%">
+  <img src="../static/r26_0_1943_1080_w1200_h678_fmax.jpg" style="width:100%">
   <div class="additional-text">
     <h2>He <em>really</em> cares about his voters!</h2>
     <p>John Smith understands that in today’s fast-paced, screen-driven society, people don’t always have the time—or trust—to seek out politicians. They’re working jobs, raising families, managing stress, and navigating a flood of online content. They don’t want to be told what to think, but they do want to be acknowledged. That’s why John doesn’t wait for voters to come to him—he reaches out to them directly, in the simplest and most accessible way possible: a text.
@@ -217,6 +217,18 @@ function showSlides(n) {
 <!-- Voting Section HTML -->
 
 <h1 style="text-align: center; margin-top: 30px;">VOTE NOW!!1!11!1!!!</h1>
-
+<!-- Form for submitting data to database aka voting -->
+<form style="text-align: center;" method="post">
+  <label>Name: <input type="text" name="name" required></label><br>
+  <label>Age: <input type="number" name="age" min="0" max="100" required></label><br>
+  <label for="candidate">Choose your candidate:</label>
+  <select name="candidate" id="candidate" required>
+    <option value="" disabled selected>Select a candidate</option>
+    {% for id, name in candidates %}
+      <option value="{{ id }}">John Smith</option>
+    {% endfor %}
+  </select>
+  <button style="margin-top: 10px;" type="submit">Submit</button>
+</form>
 </body>
 </html>
