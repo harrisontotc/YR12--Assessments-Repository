@@ -8,7 +8,6 @@ border-radius: 5px;
 }
 
 .hero-video {
-margin-top: 30px;
 object-fit: cover;
 object-position: center;
 height: 850px;
