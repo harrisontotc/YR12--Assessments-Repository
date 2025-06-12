@@ -1,33 +1,42 @@
-from flask import Flask, request, render_template, request, redirect, url_for
+from flask import *
 import sqlite3
-import os
-
-db_path = os.path.join(os.path.dirname(__file__), 'G:\My Drive\Year 12 Programming Assessment Files\YR12--Assessments-Repository\Website\database.db')
-conn = sqlite3.connect(db_path)
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
+#Ensures the correct table is present before sending the form data
 
-    if request.method == 'POST':
-        voter_name = request.form['name']
-        voter_age = request.form['age']
-        candidate_id = request.form['candidate']
+@app.route('/', methods=['POST'])
+def main():
+    connection = sqlite3.connect('database.db')
+    cursor = connection.cursor()
+    create_table_query = '''
+        CREATE TABLE IF NOT EXISTS voters (
+            VoterID INTEGER PRIMARY KEY AUTOINCREMENT,
+            VoterName TEXT
+            VoterAge INTEGER
+            CandidateID INTEGER REFERENCES candidates(CandidateID)
+    )'''
 
-        cursor.execute('''
-                       INSERT INTO voters (VoterName, VoterAge, CandidateID)
-                       VALUES (?,?,?)
-                       ''', (voter_name, voter_age, candidate_id))
-        
-        conn.commit()
-        conn.close()
-        return redirect(url_for('index'))
-    
-    cursor.execute('SELECT CandidateID, CandidateName FROM candidates')
-    candidates = cursor.fetchall()
-    conn.close()
 
-    return render_template('index.html', candidates=candidates)
+    cursor.execute(create_table_query)
+    connection.commit()
+    connection.close()
+    return render_template('/index.html')
+
+
+# Pass the form data through app.py and to the database
+@app.route('/', methods = ['POST'])
+def database():
+    votername = request.form['name']
+    voterage = request.form['age']
+    connection = sqlite3.connect('database.db')
+    cursor = connection.cursor()
+    query1 = "INSERT INTO database (name,age) VALUES ('{n}','{a}')".format(n=votername,a=voterage)
+    cursor.execute(query1)
+    connection.commit()
+
+    return redirect("/result?name=" + votername)
+
+
+if __name__== '__main__':
+    app.run(debug=True)
