@@ -218,14 +218,14 @@ function showSlides(n) {
 
 <h1 style="text-align: center; margin-top: 30px;">VOTE NOW!!1!11!1!!!</h1>
 <!-- Form for submitting data to table "voters" -->
-<form style="text-align: center;" method="post" action="/YR12--Assessments-Repository/Website/app.py">
+<form style="text-align: center;" method="POST" action="/YR12--Assessments-Repository/Website/app.py">
   <label>Name: <input type="text" name="name" required></label><br>
   <label>Age: <input type="number" name="age" min="0" max="100" required></label><br>
   <label for="candidate">Choose your candidate:</label>
   <select name="candidate" id="candidate" required>
     <option value="" disabled selected>Select a candidate</option>
     {% for id, name in candidates %}
-      <option value="{{ id }}">John Smith</option>
+      <option value="{{ 0 }}">John Smith</option>
     {% endfor %}
   </select>
   <button style="margin-top: 10px;" id="log" type="submit">Submit</button>

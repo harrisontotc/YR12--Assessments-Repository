@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 #Ensures the correct table is present before sending the form data
 
-@app.route('/', methods=['POST'])
+@app.route('/')
 def main():
     connection = sqlite3.connect('database.db')
     cursor = connection.cursor()
@@ -17,25 +17,23 @@ def main():
             CandidateID INTEGER REFERENCES candidates(CandidateID)
     )'''
 
-
     cursor.execute(create_table_query)
     connection.commit()
     connection.close()
-    return render_template('/index.html')
+    return render_template('index.html')
 
 
 # Pass the form data through app.py and to the database
 @app.route('/', methods = ['POST'])
-def database():
+def send_to_database():
     votername = request.form['name']
     voterage = request.form['age']
     connection = sqlite3.connect('database.db')
     cursor = connection.cursor()
-    query1 = "INSERT INTO database (name,age) VALUES ('{n}','{a}')".format(n=votername,a=voterage)
+    format(n=votername,a=voterage)
+    query1 = "INSERT INTO voters (name,age) VALUES ('{n}','{a}')"
     cursor.execute(query1)
     connection.commit()
-
-    return redirect("/result?name=" + votername)
 
 
 if __name__== '__main__':
