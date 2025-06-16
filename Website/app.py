@@ -3,21 +3,11 @@ import sqlite3
 
 app = Flask(__name__)
 
-#Ensures the correct table is present before sending the form data
+# Ensures the correct table is present before sending the form data
 
 @app.route('/')
 def main():
-    connection = sqlite3.connect('database.db')
-    cursor = connection.cursor()
-    create_table_query = '''
-        CREATE TABLE IF NOT EXISTS voters (
-            VoterID INTEGER PRIMARY KEY AUTOINCREMENT,
-            VoterName TEXT
-            VoterAge INTEGER
-            CandidateID INTEGER REFERENCES candidates(CandidateID)
-    )'''
-
-    cursor.execute(create_table_query)
+    connection = sqlite3.connect('YR12--Assessments-Repository/Website/assessdatabase.db')
     connection.commit()
     connection.close()
     return render_template('index.html')
@@ -28,13 +18,14 @@ def main():
 def send_to_database():
     votername = request.form['name']
     voterage = request.form['age']
-    connection = sqlite3.connect('database.db')
+    candidateid = request.form['candidate']
+    connection = sqlite3.connect('YR12--Assessments-Repository/Website/assessdatabase.db')
     cursor = connection.cursor()
-    format(n=votername,a=voterage)
-    query1 = "INSERT INTO voters (name,age) VALUES ('{n}','{a}')"
+    query1 = "INSERT INTO voters (votername,voterage,candidateid) VALUES ('{n}','{a}','{c}')".format(n=votername,a=voterage,c=candidateid)
     cursor.execute(query1)
     connection.commit()
-
+    
+    return redirect(url_for('main'))
 
 if __name__== '__main__':
     app.run(debug=True)

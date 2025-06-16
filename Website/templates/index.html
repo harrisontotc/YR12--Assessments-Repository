@@ -128,6 +128,10 @@ His ability to speak Latin shows that he is someone who respects the roots of ou
 In a time when so many politicians rely on catchphrases and shallow appeals, John’s command of Latin is a quiet, powerful reminder that thoughtfulness still matters. It shows that he has taken the time to engage with big ideas, that he values education and reflection, and that he is willing to work hard for the things that matter. Speaking Latin doesn’t make him better than other candidates—but it does make him different in a meaningful way. It proves he has the curiosity to learn deeply, the discipline to master difficulty, and the reverence for history that true leadership demands.
 
 When voters look at John Smith and see a man who can speak Latin, they are not just seeing a classical scholar—they are seeing someone who takes words seriously, who thinks carefully before he speaks, and who believes that truth is something worth striving for, even when it’s buried under centuries of dust. That’s not just admirable. That’s electable.</p>
+    <p style="font-size: 8px;">
+      Image Credit:  <br>
+      Text Credit: ChatGPT
+    </p>
   </div>
 </div>
 
@@ -149,6 +153,10 @@ He understands the moment we’re living in. In an age of livestreams, viral cli
 More than that, his confidence is contagious. It inspires trust. It signals to voters, colleagues, and even foreign leaders that he won’t falter under pressure. It says: “You can rely on me, even when things get tough.” That’s a message people need to believe—and John doesn’t just say it. He embodies it.
 
 So when people say John Smith is confident and photogenic, it’s not just a compliment. It’s a qualification. It’s one more reason he’s not just ready to run—he’s ready to lead.</p>
+    <p style="font-size: 8px;">
+      Image Credit: depositphotos.com <br>
+      Text Credit: ChatGPT
+    </p>
   </div>
 </div>
 
@@ -167,7 +175,11 @@ Some will still scoff. They’ll say, “It’s just a text.” But that underes
 
 And let’s not ignore the subtext: it takes organization, strategy, and relentless consistency to build a digital network capable of messaging thousands, if not millions, of voters. That’s not laziness. That’s logistical devotion. It’s a campaign fueled by urgency and heart. Every message may be automated, but the motivation behind it is entirely human: John Smith wants to connect. He wants to serve. And he’s doing the work to show it.
 
-So the next time someone receives a “spam” message from John Smith, they shouldn’t roll their eyes. They should recognize it for what it really is: a tap on the shoulder from a candidate who refuses to be distant. A signal that he’s already thinking about you, even if you weren’t thinking about him. That’s not spam. That’s commitment—and it’s one more reason why John Smith deserves your vote.</p>
+So the next time someone receives a “spam” message from John Smith, they shouldn’t roll their eyes. They should recognize it for what it really is: commitment—and it’s one more reason why John Smith deserves your vote.</p>
+      <p style="font-size: 8px;">
+        Image Credit:  <br>
+        Text Credit: ChatGPT
+      </p>
   </div>
 </div>
 
@@ -218,17 +230,32 @@ function showSlides(n) {
 
 <h1 style="text-align: center; margin-top: 30px;">VOTE NOW!!1!11!1!!!</h1>
 <!-- Form for submitting data to table "voters" -->
-<form style="text-align: center;" method="POST" action="/YR12--Assessments-Repository/Website/app.py">
+<form style="text-align: center;" method="POST" action="{{ url_for('send_to_database') }}">
   <label>Name: <input type="text" name="name" required></label><br>
   <label>Age: <input type="number" name="age" min="0" max="100" required></label><br>
   <label for="candidate">Choose your candidate:</label>
   <select name="candidate" id="candidate" required>
     <option value="" disabled selected>Select a candidate</option>
-    {% for id, name in candidates %}
-      <option value="{{ 0 }}">John Smith</option>
-    {% endfor %}
+    <option value="0" name="candidate">John Smith</option>
   </select>
   <button style="margin-top: 10px;" id="log" type="submit">Submit</button>
 </form>
+
+<!-- Footer -->
+
+<footer>
+  <section class="contact">
+    <div class="instagram">
+
+    </div>
+    <div class="youtube">
+
+    </div>
+    <div class="x">
+
+    </div>
+  </section>
+</footer>
+
 </body>
 </html>
