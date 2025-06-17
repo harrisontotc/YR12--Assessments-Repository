@@ -129,7 +129,7 @@ In a time when so many politicians rely on catchphrases and shallow appeals, Joh
 
 When voters look at John Smith and see a man who can speak Latin, they are not just seeing a classical scholar—they are seeing someone who takes words seriously, who thinks carefully before he speaks, and who believes that truth is something worth striving for, even when it’s buried under centuries of dust. That’s not just admirable. That’s electable.</p>
     <p style="font-size: 8px;">
-      Image Credit:  <br>
+      Image Credit: <a href="https://depositphotos.com/vectors/political-poster.html">depositphotos.com</a> <br>
       Text Credit: ChatGPT
     </p>
   </div>
@@ -154,7 +154,7 @@ More than that, his confidence is contagious. It inspires trust. It signals to v
 
 So when people say John Smith is confident and photogenic, it’s not just a compliment. It’s a qualification. It’s one more reason he’s not just ready to run—he’s ready to lead.</p>
     <p style="font-size: 8px;">
-      Image Credit: depositphotos.com <br>
+      Image Credit: <a href="https://depositphotos.com/photo/a-man-in-a-suit-looks-in-camera-and-smiles-proud-and-sure-of-himself-154377166.html">depositphotos.com</a> <br>
       Text Credit: ChatGPT
     </p>
   </div>
@@ -177,7 +177,7 @@ And let’s not ignore the subtext: it takes organization, strategy, and relentl
 
 So the next time someone receives a “spam” message from John Smith, they shouldn’t roll their eyes. They should recognize it for what it really is: commitment—and it’s one more reason why John Smith deserves your vote.</p>
       <p style="font-size: 8px;">
-        Image Credit:  <br>
+        Image Credit: <a href="https://www.northweststar.com.au/story/8953919/political-spam-texts-flood-2025-election-campaign/">www.northweststar.com</a> <br>
         Text Credit: ChatGPT
       </p>
   </div>
@@ -231,7 +231,7 @@ function showSlides(n) {
 <h1 style="text-align: center; margin-top: 30px;">VOTE NOW!!1!11!1!!!</h1>
 <!-- Form for submitting data to table "voters" -->
 <form style="text-align: center;" method="POST" action="{{ url_for('send_to_database') }}">
-  <label>Name: <input type="text" name="name" required></label><br>
+  <label>Name: <input type="text" pattern="[A-Z a-z]*" title="Letters only" name="name" required></label><br>
   <label>Age: <input type="number" name="age" min="0" max="100" required></label><br>
   <label for="candidate">Choose your candidate:</label>
   <select name="candidate" id="candidate" required>
@@ -253,6 +253,9 @@ function showSlides(n) {
     </div>
     <div class="x">
 
+    </div>
+    <div class="contact-page">
+      <a href=""></a>
     </div>
   </section>
 </footer>
