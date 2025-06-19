@@ -1,0 +1,8 @@
+-- database: ../assessdatabase.db
+
+INSERT INTO voters(VoterName,VoterAge,CandidateID) 
+VALUES ('manual test',17.0,0);
+
+SELECT voters.VoterAge
+FROM voters
+WHERE VoterAge=19.0;

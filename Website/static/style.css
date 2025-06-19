@@ -1,11 +1,16 @@
 * {
+box-sizing: border-box;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.mySlides {display: none}
 
 img {
 width: 100%;
 border-radius: 5px;
 }
+
+/* Hero Video + Hero Text */
 
 .hero-video {
 object-fit: cover;
@@ -39,4 +44,90 @@ width: 100%;
 padding-top: 100px;
 word-spacing: 15px;
 opacity: 80%;
+}
+
+/* Interactable Slideshow */ 
+
+.slideshow-container {
+max-width: 1000px;
+transform: translate(8px); 
+}
+
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+color: black;
+background-color: white;
+font-size: 30px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+
+.numbertext {
+color: whitesmoke;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+.additional-text {
+display: inline;
+position: absolute;
+margin-left: 15px;
+width: 700px;
+}
+
+
+/* Fade for images in slideshow */
+
+
+.fade {
+animation-name: fade;
+animation-duration: 2.0s;
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
 }

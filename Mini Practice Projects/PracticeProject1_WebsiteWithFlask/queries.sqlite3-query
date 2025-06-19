@@ -20,7 +20,7 @@ INSERT INTO Bikes (Model, TopSpeed, Cost, Description) VALUES ('CB1000R', 145, 1
 
 SELECT * FROM Bikes;
 
-SELECt makers.Name,Bikes.Model FROM Bikes
+SELECT makers.Name,Bikes.Model FROM Bikes
 JOIN Makers ON Makers.MakerID=Bikes.MakerID;
 
 SELECT Bikes.Model FROM Bikes
