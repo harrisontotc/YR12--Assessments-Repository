@@ -10,7 +10,7 @@ def main():
     connection = sqlite3.connect('YR12--Assessments-Repository/Website/assessdatabase.db')
     connection.commit()
     connection.close()
-    return render_template('index.html')
+    return render_template('candidates.html')
 
 
 # Pass the form data through app.py and to the database

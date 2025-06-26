@@ -46,7 +46,7 @@ word-spacing: 15px;
 opacity: 80%;
 }
 
-/* Interactable Slideshow */ 
+/*Candidate 1: John Smith */ 
 
 .slideshow-container {
 max-width: 1000px;
@@ -131,3 +131,31 @@ animation-duration: 2.0s;
 from {opacity: .4}
 to {opacity: 1}
 }
+
+/* Contact section/Footer */
+
+.social-media {
+    padding-top: 30px;
+}
+
+.social-media-images {
+    width: 3%;
+}
+
+/* Candidate 2: Mohammad Ali */
+
+.info-grid {
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    width: 100%;
+    margin: auto;
+    margin-top: 8px;
+}
+
+.kennedy-images {
+    height: 1000px;
+    width: 400px;
+}
+
