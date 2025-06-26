@@ -3,7 +3,10 @@ box-sizing: border-box;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.mySlides {display: none}
+.mySlides {
+    display: none;
+    position: relative;
+}
 
 img {
 width: 100%;
@@ -139,7 +142,8 @@ to {opacity: 1}
 }
 
 .social-media-images {
-    width: 3%;
+    width: 40px;
+    margin: 0 10px;
 }
 
 /* Candidate 2: Mohammad Ali */
@@ -148,14 +152,22 @@ to {opacity: 1}
     background-color: whitesmoke;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 60px;
+    gap: 2vw;
     width: 100%;
     margin: auto;
-    margin-top: 8px;
+    padding-right: 15px;
 }
 
 .kennedy-images {
-    height: 1000px;
-    width: 400px;
+    width: 100%;
+    height: auto;
+    max-width: 20.83vw; /* based on 400px from the original 400px width 1000px height*/
+    max-height: 52.08vw;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.kennedy-text {
+    margin-left: -55px;
 }
 

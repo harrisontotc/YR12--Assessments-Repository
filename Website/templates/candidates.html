@@ -16,13 +16,13 @@
 </video>
 <div class="hero-overlay">
     <h1 style="font-size:8.5vw" class="hero-title">Vote Today!</h1>
-    <h3 class="hero-subtitle"><em>America deserves<strong> your </strong>vote</em></h3>
+    <h3 class="hero-subtitle"><em>America deserves your vote</em></h3>
 </div>
 
 <h1>Candidate 1: John Smith</h1>
 
 <!-- John Smith - Slideshow -->
-<h2>Why John Smith is Awesome</h2>
+<p style="font-size:23px;">Why John Smith is Awesome</p>
 <div class="slideshow-container">
 
 
@@ -77,7 +77,7 @@ So when people say John Smith is confident and photogenic, it’s not just a com
     <div class="numbertext">3 / 3</div>
     <img src="../static/r26_0_1943_1080_w1200_h678_fmax.jpg" style="width:100%">
     <div class="additional-text">
-    h2>He <em>really</em> cares about his voters!</h2>
+    <h2>He <em>really</em> cares about his voters!</h2>
     <p>John Smith understands that in today’s fast-paced, screen-driven society, people don’t always have the time—or trust—to seek out politicians. They’re working jobs, raising families, managing stress, and navigating a flood of online content. They don’t want to be told what to think, but they do want to be acknowledged. That’s why John doesn’t wait for voters to come to him—he reaches out to them directly, in the simplest and most accessible way possible: a text.
 
 Far from being lazy or invasive, this approach reflects a modern form of grassroots engagement. It shows that John Smith isn’t campaigning from a distant podium or a locked-down press room. He is embedded in the real, everyday devices of everyday people. A phone buzz, a short message, a reminder of what’s at stake—these are small acts, yes, but they are acts of presence. They are proof that John doesn’t see voters as statistics or demographics. He sees them as individuals, each worth the time it takes to say: “I’m here. I care. I need you.”
@@ -145,13 +145,33 @@ function showSlides(n) {
 
 <section class="info-grid">
     <img class="kennedy-images" src="../static/addressing-concerns.jpg" alt="kennedy being questioned by media">
-    <div class="kennedy-text-01">
+    <div class="kennedy-text">
         <h3>Policies to die for </h3>
-        <p>test</p>
+        <p>They said legends never die—and they were right.
+
+Back from the grave and ready to lead a divided nation into a bold new era, John F. Kennedy isn’t just a familiar face from the history books—he’s the comeback candidate of the century. But don’t let the vintage charm and timeless charisma fool you. JFK’s resurrection isn’t about nostalgia. It’s about policy—and his are nothing short of revolutionary. Quite literally.
+
+These are policies to die for—the kind of bold, fearless ideas that shake the political stage. He’s not afraid of controversy—he’s already been through death itself. Medicare-for-all? Of course. Climate change action? He’s lived through the ice-cold of the afterlife—he knows the stakes. Education reform? He’s got plans so sharp they’d make even modern bureaucrats rise from their seats.
+That’s why every platform he runs on now is built for the long haul—ideas meant to outlive even him (again).
+
+His new campaign is driven by a belief that the future is worth fighting for—even from beyond the grave. He’s not just returning for a victory lap. He’s here to finish what he started. Civil rights, healthcare, science investment, space exploration—you name it. Only now, he’s unburdened by the politics of fear. What’s there to fear, after all, when you’ve already crossed over?</p>
+
+<p>Vote for the man who’s proven—literally—that he’s willing to die for his beliefs. And now, he’s come back to live for them.
+
+Vote John F. Kennedy. Because some policies? They’re to die for.</p>
     </div>
-    <img class="kennedy-images" src="../static/John-F-Kennedy-1961.webp" alt="kennedy pointing at viewer">
-    <div class="kennedy-text-02">
-        <h3>He wants <em>YOU!</em></h3>
+    <img class="kennedy-images" src="../static/in-car.webp" alt="kennedy pointing at viewer">
+    <div class="kennedy-text">
+        <h3>He's not afraid for a round 2</h3>
+        <p>Some leaders rise from obscurity. John F. Kennedy rose from the grave.
+
+He’s not just a relic of the past—he’s the rare candidate who’s already faced the final curtain and came back swinging. Round 1 made him an icon. Round 2 will make him unstoppable. He’s seen what legacy looks like. He’s watched history forget empty promises and hollow speeches. That’s why this time, he’s not here to play it safe—he’s here to make it count.
+
+When others talk about courage, JFK redefines it. This is a man who took a bullet for his country and still decided the job wasn’t done. While modern candidates argue on social media, John’s preparing to finish what he started: a bold vision for a fairer, smarter, stronger America. His second campaign isn’t about restoring Camelot—it’s about building something even better.
+
+He’s no stranger to pressure, no rookie to war, and no coward in the face of death. That kind of experience doesn’t just make a good story—it makes a better president. He’s got grit, guts, and ghostly resolve. And now, with death behind him and the future ahead, he’s ready to lead with the kind of clarity only the afterlife can give you.
+
+Because JFK doesn’t just believe in second chances—he embodies them.</p>
     </div>
 </section>
 
@@ -167,8 +187,8 @@ function showSlides(n) {
     <label for="candidate">Choose your candidate:</label>
     <select name="candidate" id="candidate" required>
         <option value="" disabled selected>Select a candidate</option>
-        <option value="0" name="candidate">John Smith</option>
-        <option value="1" name="candidate">John F. Kennedy</option>
+        <option value="0">John Smith</option>
+        <option value="1">John F. Kennedy</option>
     </select>
     <button style="margin-top: 10px;" id="log" type="submit">Submit</button>
 </form>
